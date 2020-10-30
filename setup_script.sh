@@ -12,8 +12,8 @@ apt-get upgrade -y &
 apt install lsof wget -y
 
 # get tarball
-wget # TODO LINK HERE
-tar cvf setup_files.tar.gz
+# wget # TODO LINK HERE
+tar xvf setup_files.tar.gz
 
 # link csc user .histfile and .bash_history to /dev/null
 echo "linking history to /dev/null for csc"
