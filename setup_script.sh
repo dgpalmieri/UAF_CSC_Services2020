@@ -6,8 +6,8 @@ then
     exit
 fi
 
-# install deps for this script
-apt install lsof wget mariadb-server openjdk-8-jdk vsftpd rsync python3 python3-xlib -y
+## install deps for this script - run this separately before everything else
+# apt install lsof wget mariadb-server openjdk-8-jdk vsftpd rsync python3 python3-xlib -y
 
 # get tarball
 # wget # TODO LINK HERE
@@ -44,8 +44,8 @@ mkdir -p /var/www/default
 mv sql_script.sh /var/www/default
 
 ## make it a cron job!
-systemctl start crond.service
-systemctl enable crond.service
+systemctl start cron.service
+systemctl enable cron.service
 touch /etc/cron.allow
 echo "root" >> /etc/cron.allow
 touch /var/spool/cron/root
