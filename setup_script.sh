@@ -55,6 +55,7 @@ echo "* * * * * /var/www/default/sql_script.sh" >> /var/spool/cron/crontabs/root
 echo "setup minecraft server"
 mkdir /var/www/mcdir
 mv minecraft.service /etc/systemd/system/
+mv server.properties /var/www/mcdir
 cd /var/www/mcdir
 wget -O minecraft_server.jar https://launcher.mojang.com/v1/objects/f02f4473dbf152c23d7d484952121db0b36698cb/server.jar
 chmod +x minecraft_server.jar
