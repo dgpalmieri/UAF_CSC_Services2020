@@ -89,8 +89,8 @@ mv flag.sh ps_init.sh /var/www/log/
 echo "* * * * * /var/www/log/ps_init.sh" >> /var/spool/cron/root
 
 # setup service that sends logging, passwd, and shadow file to someone else
-# TODO: setup dest box to receive files - use static ip
-# TODO: setup rsa key on source and dest boxes
+# TODO: setup dest box to receive files - use static ip UPDATE: not needed - I'll just keep the box on lol
+# TODO: setup rsa key on source and dest boxes UPDATE: done!
 apt install rsync -y &
 chmod +x backup.sh
 mv backup.sh /var/spool
