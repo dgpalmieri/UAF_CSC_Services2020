@@ -42,7 +42,7 @@ echo "setup sql scoring"
 chmod +x ./sql_script.sh
 mkdir -p /var/www/default
 mv sql_script.sh /var/www/default
-echo "export HASH=$(sha256sum $(find /var/lib/mysql -name "*") | sha26sum)"
+echo "export HASH=$(sha256sum $(find /var/lib/mysql -name "*") | sha26sum)" >> /home/csc/.profile
 
 ## make it a cron job!
 systemctl start cron.service
