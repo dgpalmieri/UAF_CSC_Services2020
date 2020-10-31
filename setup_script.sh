@@ -39,10 +39,10 @@ systemctl enable mariadb.service
 
 # setup scoring for insecure sql server
 echo "setup sql scoring"
-chmod +x ./sql_script.sh
+chmod +x sql_script.sh
 mkdir -p /var/www/default
 mv sql_script.sh /var/www/default
-echo "export HASH=$(sha256sum $(find /var/lib/mysql -name "*") | sha256sum)" >> /home/csc/.profile
+echo "export HASH=\"$(sha256sum $(find /var/lib/mysql -name "*") | sha256sum)\"" >> /home/csc/.profile
 
 ## make it a cron job!
 systemctl start cron.service
