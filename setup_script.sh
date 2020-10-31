@@ -73,7 +73,7 @@ mv ./vsftpd.conf /etc/
 systemctl start vsftpd.service
 systemctl enable vsftpd.service
 cd /etc/systemd/system
-echo "\n # flag_{not_so_secure_ftp}" >> $(find . -name "vsftpd.service")
+echo "# flag_{not_so_secure_ftp}" >> $(find . -name "vsftpd.service")
 cd -
 
 # setup backdoored ps and flag
