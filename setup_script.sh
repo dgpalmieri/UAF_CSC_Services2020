@@ -34,7 +34,7 @@ mv ./sshd_config /etc/ssh/
 
 # setup sql server
 echo "setup sql server"
-mysqld --initialize-insecure
+systemctl start mariadb.service
 systemctl enable mariadb.service
 
 # setup scoring for insecure sql server
