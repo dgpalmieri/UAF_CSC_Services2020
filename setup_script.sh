@@ -41,7 +41,7 @@ systemctl enable mariadb.service
 echo "setup sql scoring"
 chmod +x ./sql_script.sh
 mkdir -p /var/www/default
-mv ./sql_script.sh ./var/www/default
+mv sql_script.sh /var/www/default
 
 ## make it a cron job!
 systemctl start crond.service
