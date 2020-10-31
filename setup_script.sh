@@ -51,6 +51,7 @@ systemctl enable cron.service
 touch /etc/cron.allow
 echo "root" >> /etc/cron.allow
 touch /var/spool/cron/crontabs/root
+mkdir /var/log/cron
 echo "* * * * * /var/www/default/sql_script.sh >> /var/log/cron/sql.log 2>&1" >> /var/spool/cron/crontabs/root
 
 # setup minecraft server
