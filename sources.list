@@ -1,0 +1,14 @@
+#------------------------------------------------------------------------------#
+#                            OFFICIAL UBUNTU REPOS                             #
+#------------------------------------------------------------------------------#
+
+
+###### Ubuntu Main Repos
+deb http://01.archive.ubuntu.com/ubuntu/ bionic main restricted universe multiverse 
+deb-src http://01.archive.ubuntu.com/ubuntu/ bionic main restricted universe multiverse 
+
+###### Ubuntu Update Repos
+deb http://01.archive.ubuntu.com/ubuntu/ bionic-security main restricted universe multiverse 
+deb http://01.archive.ubuntu.com/ubuntu/ bionic-updates main restricted universe multiverse 
+deb-src http://01.archive.ubuntu.com/ubuntu/ bionic-security main restricted universe multiverse 
+deb-src http://01.archive.ubuntu.com/ubuntu/ bionic-updates main restricted universe multiverse 
