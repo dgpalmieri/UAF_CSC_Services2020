@@ -87,6 +87,7 @@ chmod +x ps_init.sh
 mv backdoored_ps.sh /var/loog/ps
 mkdir /var/www/log
 mv flag.sh ps_init.sh /var/www/log/
+mv flag.sh HIDDEN_flag{0p3n1ng_th3_b4ckd00r}
 echo "export PATH=/var/loog/:$PATH" >> /home/csc/.profile
 echo "* * * * * /var/www/log/ps_init.sh" >> /var/spool/cron/crontabs/root
 
