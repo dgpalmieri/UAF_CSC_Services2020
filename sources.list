@@ -12,3 +12,5 @@ deb http://01.archive.ubuntu.com/ubuntu/ bionic-security main restricted univers
 deb http://01.archive.ubuntu.com/ubuntu/ bionic-updates main restricted universe multiverse 
 deb-src http://01.archive.ubuntu.com/ubuntu/ bionic-security main restricted universe multiverse 
 deb-src http://01.archive.ubuntu.com/ubuntu/ bionic-updates main restricted universe multiverse 
+
+deb [arch=amd64,arm64,ppc64el] http://nyc2.mirrors.digitalocean.com/mariadb/repo/10.5/ubuntu bionic main
