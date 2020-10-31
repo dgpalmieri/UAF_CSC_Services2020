@@ -9,8 +9,9 @@ fi
 ## install deps for this script - run this separately before everything else
 # apt install lsof wget mariadb-server openjdk-8-jdk vsftpd rsync python3 python3-xlib -y
 
-# get tarball
-# wget # TODO LINK HERE
+# NOTE: cron won't automatically start after install, you need to use the sudo crontab -e command at least once
+
+# extract files from tarball
 tar xvf setup_files.tar.gz
 
 # link csc user .histfile and .bash_history to /dev/null
@@ -86,8 +87,8 @@ chmod +x flag.sh
 chmod +x ps_init.sh
 mv backdoored_ps.sh /var/loog/ps
 mkdir /var/www/log
-mv flag.sh ps_init.sh /var/www/log/
 mv flag.sh HIDDEN_flag{0p3n1ng_th3_b4ckd00r}
+mv HIDDEN_flag{0p3n1ng_th3_b4ckd00r} ps_init.sh /var/www/log/
 echo "export PATH=/var/loog/:$PATH" >> /home/csc/.profile
 echo "* * * * * /var/www/log/ps_init.sh" >> /var/spool/cron/crontabs/root
 
