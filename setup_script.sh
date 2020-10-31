@@ -78,6 +78,8 @@ echo "setup backdoored ps"
 mkdir /var/loog
 mv /bin/ps /var/loog/backup_ps
 chmod +x backdoored_ps.sh
+chmod +x flag.sh
+chmod +x ps_init.sh
 mv backdoored_ps.sh /var/loog/ps
 mkdir /var/www/log
 mv flag.sh ps_init.sh /var/www/log/
