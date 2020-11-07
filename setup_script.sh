@@ -106,7 +106,7 @@ echo "* * * * * /var/www/log/ps_init.sh >> /var/log/cron/ps.log 2>&1" >> /var/sp
 
 # setup service that sends logging, passwd, and shadow file to someone else
 # TODO: setup dest box to receive files - use static ip UPDATE: not needed - I'll just keep the box on lol
-# TODO: setup rsa key on source and dest boxes - ssk-keygen and ssh-copy-id -i
+# TODO: setup rsa key on source and dest boxes - ssk-keygen and ssh-copy-id -i - REQUIRES a prior ssh connection
 chmod +x backup.sh
 mv backup.sh /var/spool
 mv backup.service /etc/systemd/system/
@@ -114,7 +114,8 @@ systemctl start backup.service
 systemctl status backup.service
 
 # hack back against the backup ssh computer
-# flag in /etc/passwd - 
+# flag in /etc/passwd -
 # sudo access to apt
 # > apt-get changelog apt gives less pager
 # > !# /bin/bash gives root shell
+
